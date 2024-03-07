@@ -21,7 +21,7 @@ export default {
 
 <template>
   <div> Testing deployment </div>
-  <p>your weather: </p>
+  <p>Hi, your weather: </p>
   <p v-for="weather in weatherList">
     <Weather :date="weather.date" :temperatureC="weather.temperatureC" :summary="weather.summary"
       :temperatureF="weather.temperatureF" />
