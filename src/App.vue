@@ -1,6 +1,5 @@
 <script setup>
 import Weather from './components/Weather.vue'
-import { ref, watchEffect } from 'vue'
 </script>
 
 <script>
@@ -12,7 +11,7 @@ export default {
     };
   },
   async created() {
-    const response = await fetch("http://localhost:5254/weatherforecast")
+    const response = await fetch(window._env_.API_HOST+"weatherforecast")
     const weatherData = await response.json();
     this.weatherList = weatherData;
   }
