@@ -11,7 +11,7 @@ export default {
     };
   },
   async created() {
-    const response = await fetch(window._env_.API_HOST+"weatherforecast")
+    const response = await fetch(import.meta.env.VITE_API_ENDPOINT+"weatherforecast")
     const weatherData = await response.json();
     this.weatherList = weatherData;
   }
