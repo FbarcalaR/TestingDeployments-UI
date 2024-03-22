@@ -25,8 +25,8 @@ steps:
 
 - task: AzureStaticWebApp@0
   inputs:
-    app_location: '/'
-    api_location: '/'
-    output_location: '/dist'
+    app_location: '/src'
+    api_location: ''
+    output_location: 'wwwroot'
     verbose: true
     azure_static_web_apps_api_token: $(deployment_token_static)
