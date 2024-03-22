@@ -20,13 +20,12 @@ steps:
     npm run build
   displayName: 'npm install and build'
 
+- checkout: self
+  submodules: true
+
 - task: AzureStaticWebApp@0
   inputs:
     app_location: '/'
+    api_location: '/'
     output_location: '/dist'
-    skip_app_build: true
-    skip_api_build: true
-    verbose: true
-    build_timeout_in_minutes: 5
     azure_static_web_apps_api_token: '189e2d3e73666a6fdbf115977f1358743cdb5ab99790cf7ce0e1c3ff17b827165-1ddc6385-2b0d-4e58-93ce-c7f119fe3aea003389900'
-    production_branch: 'main'
