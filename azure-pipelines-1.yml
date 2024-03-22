@@ -28,4 +28,5 @@ steps:
     app_location: '/'
     api_location: '/'
     output_location: '/dist'
-    azure_static_web_apps_api_token: '189e2d3e73666a6fdbf115977f1358743cdb5ab99790cf7ce0e1c3ff17b827165-1ddc6385-2b0d-4e58-93ce-c7f119fe3aea003389900'
+    verbose: true
+    azure_static_web_apps_api_token: $(deployment_token_static)
