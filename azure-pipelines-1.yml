@@ -27,5 +27,7 @@ steps:
   inputs:
     app_location: '/'
     output_location: 'wwwroot'
+    skip_app_build: true
+    skip_api_build: true
     verbose: true
     azure_static_web_apps_api_token: $(deployment_token_static)
